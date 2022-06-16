@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Staatliches&display=swap');
+
+/*
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Staatliches', cursive;
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    background-color: #333;
+    margin: 0;
+}
+
+::selection {
+    background-color: #333;
+    color: #F86;
+}
+
+.websiteContainer {
+    margin: 0 auto;
+    padding: 2rem;
+    width: 60rem;
+    height: calc(100vh - 4rem);
+    background: #333;
+}
+
+/* Style Collapsing Boxes */
+.details {
+    width: 60rem;
+    margin-bottom: 1rem;
+}
+.details[open] {
+    margin-bottom: 2rem;
+}
+.details .title::before {
+    content:'';
+    display: inline-block;
+    transform:translate(-0.2rem, 0.2rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../img/arrow-down.png);
+    background-size: 1.5rem;
+}
+.details[open] .title::before {
+    content: '';
+    display: inline-block; 
+    transform: translate(-0.2rem, 0.2rem);
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(../img/arrow-up.png);
+    background-size: 1.5rem;
+}
+.details[open] .title {
+    width: 100%;
+    text-align: right;
+    box-shadow: 0.6rem 0.6rem 0 black;
+    border-bottom: 2px hidden black;
+    background-color: #222;
+    color: #FED;
+}
+.details[open] .title:hover {
+    text-shadow: 0 0 1em #FED;
+}
+.title {
+    font-family: 'Staatliches', cursive;
+    min-width: 25ch;
+    width: fit-content;
+    max-width: 100%;
+    background-color: #F86;
+    box-sizing: border-box;
+    border: 2px solid black;
+    color: #333;
+    padding: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+.title:hover {
+    background: #222;
+    color: #FED;
+}
+.title::-webkit-details-marker {
+    display: none;
+}
+.pCollapse {
+    width: fit-content;
+    text-align: justify;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: #F86;
+    color: #333;
+    margin: 0;
+    padding: 1rem;
+    box-shadow: 0.6rem 0.6rem 0 black;
+}
+
+/* Don't allow text selection for this class */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
